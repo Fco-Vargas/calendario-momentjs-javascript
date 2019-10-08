@@ -80,7 +80,7 @@ class Calendar {
                 disabledClass = 'grid__cell--disabled';
             }
             templateCells += `
-                <span class="grid__cell grid__cell--td ${disabledClass}" data-cell-id="${i}">
+                <span class="grid__cell grid__cell--gd ${disabledClass}" data-cell-id="${i}">
                     ${this.cells[i].date.date()}
                 </span>
             `;
@@ -119,7 +119,7 @@ class Calendar {
     }
 
     addEventListenerToCells() {
-        let elCells = this.elCalendar.querySelectorAll('.grid__cell--td');
+        let elCells = this.elCalendar.querySelectorAll('.grid__cell--gd');
         elCells.forEach(elCell => {
             elCell.addEventListener('click', e => {
                 let elTarget = e.target;
